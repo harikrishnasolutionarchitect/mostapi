@@ -19,3 +19,10 @@ jobs:
         run: echo "Hello World!"
       - name: uptime
         run: uptime
+  tag-v-0-1-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Tag Pushed_v0.1.0"
+      - name: grep os level process
+        run: ps -ef |grep java
