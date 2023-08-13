@@ -13,6 +13,7 @@ on:
       - v0.7.0
       - v0.8.0
       - v0.9.0
+      - v0.9.1
 
 jobs:
   job-update-and-install-pkgs:
@@ -20,7 +21,7 @@ jobs:
     steps:
       - name: install and update
         run: |
-            apt-get update && apt-get install curl , wget -y 
+            sudo apt-get update && sudo apt-get install curl , wget -y 
           
   
   #job-docker-containers-info-v0-8-0:
