@@ -12,18 +12,27 @@ on:
       - v0.6.0
       - v0.7.0
       - v0.8.0
+      - v0.9.0
 
 jobs:
-  job-docker-containers-info-v0-8-0:
-    runs-on: ubntu-latest
+  job-update-and-install-pkgs:
+    runs-on: ubuntu-latest
     steps:
-      - run: |
-            sudo docker ps 
-            sudo docker ps | wc -l
-            sudo docker images
-            sudo docker images |wc -l
-            sudo docker volumes 
-            sudo docker volumes |wc -l
+      - name: install and update
+        run: |
+            apt-get update && apt-get install curl , wget -y 
+          
+  
+  #job-docker-containers-info-v0-8-0:
+  #  runs-on: ubntu-latest
+  #  steps:
+  #    - run: |
+  #          sudo docker ps 
+  #          sudo docker ps | wc -l
+  #          sudo docker images
+  #          sudo docker images |wc -l
+  #          sudo docker volumes 
+  #          sudo docker volumes |wc -l
           
   my-job:
     runs-on: ubuntu-latest
