@@ -8,6 +8,7 @@ on:
       - v0.2.0
       - v0.3.0
       - v0.4.0
+      - v0.5.0
 
 jobs:
   my-job:
@@ -42,4 +43,13 @@ jobs:
         run: ps -ef |grep root
       - name: get total count of OS Level running Process'e 
         run: ps -ef |grep java |wc -l 
+  job-filesystem:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list root filesystem
+        run: ls -lrt 
+      - name: list directory on root filesystem
+        run: ls -lrtd /
+      - name: find modified files from last 2 mints
+        run: find / -mtime -2 
 
