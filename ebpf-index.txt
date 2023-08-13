@@ -1,0 +1,86 @@
+Main link: https://ebpf.io/
+
+https://ebpf.io/what-is-ebpf/
+
+Load Balancer (DSR) - Direct Server Return-based   -- ebpf dsr
+
+https://polycube-network.readthedocs.io/en/latest/services/pcn-loadbalancer-dsr/loadbalancer-dsr.html
+
+https://github.com/projectcalico/calico/issues/4326   run eBPF + DSR on top of Wireguard ( Layer 3 VPN ) #4326
+
+
+https://thenewstack.io/ebpf-put-the-kubernetes-data-plane-in-the-kernel/
+eBPF: Put the Kubernetes Data Plane in the Kernel
+
+
+eBPF -- KUBERNETES
+
+https://www.google.com/search?safe=active&sca_esv=556106327&rlz=1C1GCEA_enIN1054IN1054&sxsrf=AB5stBh2G28J46t2aXUSMHNlZXwnSTspUQ:1691795392203&q=eBPF+kubernetes&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjo54n73NWAAxV_SWwGHS3mC3EQ0pQJegQIChAB&biw=1707&bih=762&dpr=1.13#imgrc=zALvwhrKnjqmMM
+
+eBPF Policy Enforcer - bpf_skb_event_output() -- kernal space  | user space
+
+https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine
+
+
+--------------------------
+Cilium  -- eBPF -- Cilium Mesh
+
+eBPF - The Future of Networking & Security
+Cilium Mesh – One Mesh to Connect Them All
+
+
+https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/
+https://isovalent.com/blog/post/introducing-cilium-mesh/
+
+
+Kernel Events -- Falco 
+
+https://falco.org/docs/event-sources/kernel/
+
+Katran
+
+https://github.com/facebookincubator/katran
+
+BCC
+
+https://github.com/iovisor/bcc
+
+-----------------
+new relic
+
+
+azure terraform newrelic integration
+
+
+https://docs.newrelic.com/docs/more-integrations/terraform/terraform-intro/
+
+new-relic with pixie 
+
+https://docs.newrelic.com/docs/kubernetes-pixie/auto-telemetry-pixie/install-auto-telemetry-pixie/
+
+
+Pixie :
+
+https://github.com/pixie-io/pixie/blob/main/.readme_assets/net_flow_graph.png
+https://github.com/pixie-io/pixie
+
+
+======================
+kubernetes pod custom metrics
+
+How to autoscale apps on Kubernetes with custom metrics
+
+https://learnk8s.io/autoscaling-apps-kubernetes
+
+
+HorizontalPodAutoscaler Walkthrough : https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+
+
+========================
+
+Bringing traffic to your pods with Load Balancer
+
+https://www.scaleway.com/en/blog/kubernetes-load-balancer/
+
+
+
