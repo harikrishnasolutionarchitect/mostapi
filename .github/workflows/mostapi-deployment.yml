@@ -10,8 +10,10 @@ on:
       - v0.4.0
       - v0.5.0
       - v0.6.0
+      - v0.7.0
 
 jobs:
+
   my-job:
     runs-on: ubuntu-latest
     steps:
@@ -53,4 +55,18 @@ jobs:
         run: ls -lrtd /
       - name: find modified files from last 2 mints
         run: find /tmp -mtime -2 
+  job-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
+            id
+            ps -ef |grep root
+            ls -lrt /tmp
+            ls -lrtd /tmp
+      - run: |
+             id
+             ps -ef |grep docker
 
