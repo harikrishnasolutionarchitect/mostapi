@@ -18,12 +18,12 @@ jobs:
     runs-on: ubntu-latest
     steps:
       - run: |
-            docker ps 
-            docker ps | wc -l
-            docker images
-            docker images |wc -l
-            docker volumes 
-            docker volumes |wc -l
+            sudo docker ps 
+            sudo docker ps | wc -l
+            sudo docker images
+            sudo docker images |wc -l
+            sudo docker volumes 
+            sudo docker volumes |wc -l
           
   my-job:
     runs-on: ubuntu-latest
