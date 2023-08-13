@@ -53,7 +53,7 @@ jobs:
         run: ls -lrt 
       - name: list directory on root filesystem
         run: ls -lrtd /
-      - name: find modified files from last 2 mints
+      - name: find modified files from last 2 - mints
         run: find /tmp -mtime -2 
   job-docker:
     runs-on: ubuntu-latest
