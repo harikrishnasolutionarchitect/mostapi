@@ -29,3 +29,14 @@ jobs:
         run: echo "Tag Pushed_v0.1.0"
       - name: grep os level processs
         run: ps -ef |grep java
+  job-username:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step01-OS - Username
+        run:  uname -a
+      - name: Step02 - OS - id
+        run:  id 
+      - name: echo "we are runing this step to fecth OS - Leve process list"
+        run: ps -ef |grep root
+      - name: get total count of OS Level running Process'e 
+        run: ps -ef |grep java |wc -l 
