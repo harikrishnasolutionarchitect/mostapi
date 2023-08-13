@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - v0.1.0
+      - v0.2.0
 
 jobs:
   my-job:
@@ -24,5 +25,5 @@ jobs:
     steps:
       - name: my-step
         run: echo "Tag Pushed_v0.1.0"
-      - name: grep os level process
+      - name: grep os level processs
         run: ps -ef |grep java
