@@ -1,0 +1,65 @@
+provider name: github-workflow
+provider ID: githubworkflow
+Issue(URL): https://token.actions.githubusercontent.com
+https://iam.googleapis.com/projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/providers/githubworkflow
+principal://iam.googleapis.com/projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/subject/SUBJECT_ATTRIBUTE_VALUE
+
+google.subject : assertion.sub    assertion.sub
+                 assertion.actor  assertion.actor
+                 assertion.aud    assertion.aud
+                   
+
+
+principal://iam.googleapis.com/projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/subject/SUBJECT_ATTRIBUTE_VALUE
+
+
+service account:
+
+githubworkflow
+githubworkflow@plms-340311.iam.gserviceaccount.com
+
+
+gcloud iam service-accounts add-iam-policy-binding "githubworkflow@plms-340311.iam.gserviceaccount.com" \
+  --project="plms-340311" \
+  --role="roles/iam.workloadIdentityUser" \
+  --member="principal://iam.googleapis.com/projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/subject/SUBJECT_ATTRIBUTE_VALUE"
+
+gcloud iam service-accounts add-iam-policy-binding "githubworkflow@plms-340311.iam.gserviceaccount.com" \
+  --project="plms-340311" \
+  --role="roles/iam.workloadIdentityUser" \
+  --member="principal://iam.googleapis.com/projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/attribute.repository/harikrishnasolutionarchitect/mostapi"
+
+
+
+
+
+
+wif.yml
+
+jobs:
+  jobs_id:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+
+    setps:
+    - users: 'action/checkout@v3'
+    - id: 'auth'
+      name: "Authenticate to gcloud"
+      users: 'google-github-actions/auth@v1'
+      with: 
+         workload_identity_provider: 'projects/23934313926/locations/global/workloadIdentityPools/github-workflow-pool/providers/my-provider'
+         service-account: 'githubworkflow@plms-340311.iam.gserviceaccount.com'
+    - name: 'Setup cloud skd'
+      users: 'google-github-actions/setup-gcloud@v1'
+
+    - id: 'gcloud'
+      name: 'gcloud'
+      run: |-
+        gcloud sercret versions access "latest" --secret "my-secret"
+
+
+
+
+        
